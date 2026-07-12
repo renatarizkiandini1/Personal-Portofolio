@@ -239,13 +239,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 5rem;
     min-height: 0;
     padding-top: 3.5rem;
     padding-bottom: 4rem;
   }
   
-  .hero-text { flex: 1; max-width: 600px; }
+  .hero-text { flex: 1 1 620px; max-width: 720px; }
   
   .hero-greeting {
     color: var(--blue);
@@ -257,35 +257,35 @@
   }
   
   .hero-text h1 {
-    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-size: clamp(2.6rem, 4.2vw, 4rem);
     font-weight: 700;
     color: var(--navy-dark);
-    line-height: 1.15;
-    margin-bottom: 0.9rem;
+    line-height: 1.12;
+    margin-bottom: 1rem;
   }
   .hero-text h1 span { color: var(--blue); }
   
   .hero-role {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--ink-soft);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.4rem;
   }
   .hero-role .dot { color: var(--amber); margin: 0 0.3rem; }
   
   .hero-desc {
     color: var(--ink-soft);
-    margin-bottom: 2rem;
-    font-size: 1.02rem;
+    margin-bottom: 2.2rem;
+    font-size: 1.1rem;
   }
   .hero-desc strong { color: var(--navy-dark); }
   
-  .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 1.1rem; }
   
-  .hero-img { flex-shrink: 0; }
+  .hero-img { flex: 0 0 auto; }
   .img-wrapper {
-    width: 320px;
-    height: 320px;
+    width: min(400px, 30vw);
+    height: min(400px, 30vw);
     border-radius: 50%;
     overflow: hidden;
     border: 6px solid var(--white);
