@@ -701,54 +701,99 @@
     .back-to-top { position: static; margin-top: 0.5rem; }
   }
 
-  /* ---------------- PRINT (Download Portfolio → PDF) ---------------- */
-  @media print {
-    /* Sembunyikan elemen yang tidak relevan di versi cetak */
-    header, .hero-btns, .back-to-top, .footer-socials, .social-links,
-    .hamburger, .certificate-card a, .project-links {
-      display: none !important;
-    }
+  /* ---------------- PRINT (Download Portfolio -> PDF, gaya slide) ---------------- */
+  @page {
+    size: 297mm 210mm; /* A4 landscape, terasa seperti slide */
+    margin: 0;
+  }
 
+  @media print {
     * {
       animation: none !important;
       transition: none !important;
       box-shadow: none !important;
     }
 
-    body { background: var(--white); color: #000; }
+    html, body { background: var(--white); color: #000; }
 
-    section {
-      max-width: 100%;
-      padding: 1.2rem 0.4in;
-      page-break-inside: avoid;
+    /* Sembunyikan elemen yang tidak relevan di versi cetak */
+    header, .hero-btns, .back-to-top, .footer-socials, .social-links,
+    .hamburger, .certificate-card a, .project-links, footer {
+      display: none !important;
     }
 
-    .hero { padding-top: 0.5in; gap: 2rem; }
-    .img-wrapper { animation: none !important; width: 140px; height: 140px; }
+    /* Setiap section = satu "slide" penuh, landscape */
+    section {
+      width: 297mm;
+      min-height: 210mm;
+      max-width: none;
+      margin: 0;
+      padding: 14mm 20mm;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      page-break-after: always;
+      break-after: page;
+      page-break-inside: avoid;
+    }
+    section:last-of-type {
+      page-break-after: auto;
+      break-after: auto;
+    }
 
-    .about-content { display: block; }
+    .section-title { margin-bottom: 1.4rem; }
+    .section-title h2 { font-size: 1.9rem; }
+    .eyebrow { font-size: 0.75rem; }
+
+    /* --- Hero slide (cover) --- */
+    .hero { padding: 14mm 24mm; gap: 3rem; }
+    .hero-text h1 { font-size: 2.6rem; }
+    .hero-desc { font-size: 0.98rem; }
+    .img-wrapper { width: 150px; height: 150px; animation: none !important; }
+
+    /* --- About slide --- */
+    .about-content { gap: 2rem; }
+    .about-text p { font-size: 0.9rem; margin-bottom: 0.7rem; }
+    .about-info { margin-top: 1rem; gap: 0.5rem; }
+    .about-info div { padding: 0.5rem 0.8rem; font-size: 0.82rem; }
     .about-card {
       background: var(--white) !important;
       border: 1.5px solid var(--navy);
-      margin-top: 1.2rem;
-      display: flex;
-      justify-content: space-around;
       position: static;
+      padding: 1.4rem;
     }
-    .about-stat-num, .about-card h3 { color: var(--navy) !important; }
-    .about-stat-label { color: #444 !important; }
-    .about-card-divider { background: var(--border) !important; }
+    .about-stat-num { font-size: 2rem; color: var(--navy) !important; }
+    .about-stat-label { color: #444 !important; font-size: 0.78rem; }
+    .about-card-divider { background: var(--border) !important; margin: 0.7rem 0; }
 
-    .timeline-content, .skill-category, .project-card, .certificate-card {
-      border: 1px solid var(--border);
-      break-inside: avoid;
-    }
+    /* --- Experience slide --- */
+    .timeline { padding-left: 1.8rem; }
+    .timeline-item { margin-bottom: 1.1rem; }
+    .timeline-content { border: 1px solid var(--border); padding: 1rem 1.2rem; break-inside: avoid; }
+    .timeline-head h3 { font-size: 0.98rem; }
+    .timeline-content li { font-size: 0.82rem; margin-bottom: 0.25rem; }
 
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .project-shot { display: none; } /* gambar besar boros halaman & tinta saat dicetak */
+    /* --- Skills slide --- */
+    .skills-grid { gap: 0.9rem; }
+    .skill-category { padding: 1rem; }
+    .skill-category h3 { font-size: 0.9rem; margin-bottom: 0.6rem; }
+    .skill-tags span { font-size: 0.72rem; padding: 0.3rem 0.6rem; }
 
-    footer { background: var(--white); color: var(--ink-soft); border-top: 1px solid var(--border); }
-    .footer-brand { color: var(--navy-dark); }
+    /* --- Projects slide: ringkas, tanpa screenshot besar --- */
+    .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
+    .project-card { border: 1px solid var(--border); break-inside: avoid; }
+    .project-shot { display: none; }
+    .project-body { padding: 0.9rem; }
+    .project-body h3 { font-size: 0.92rem; margin-bottom: 0.35rem; }
+    .project-body p { font-size: 0.76rem; margin-bottom: 0.6rem; }
+    .project-tags span { font-size: 0.66rem; padding: 0.22rem 0.5rem; }
+
+    /* --- Contact slide (penutup) --- */
+    .contact { text-align: center; }
+    .contact-desc { font-size: 0.92rem; }
+    .contact-info { margin-top: 1rem; }
+    .email-link { font-size: 0.9rem; }
 
     a[href]:after { content: none !important; }
   }
