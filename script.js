@@ -46,6 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // --- Download Portfolio: export the site itself as PDF via browser print ---
+  const portfolioBtns = document.querySelectorAll('.js-download-portfolio');
+  const originalTitle = document.title;
+
+  portfolioBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.title = 'Portfolio - Renata Rizki Andini';
+      window.print();
+    });
+  });
+
+  window.addEventListener('afterprint', () => {
+    document.title = originalTitle;
+  });
+
   // --- Scroll-reveal animations ---
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
