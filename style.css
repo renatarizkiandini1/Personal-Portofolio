@@ -199,11 +199,14 @@
   }
   @media (max-width: 1300px) and (min-width: 769px) {
     .nav-links { gap: 1.6rem; font-size: 0.92rem; }
-    .btn-nav-cv { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
+    .nav-cta { gap: 0.5rem; }
+    .btn-nav-cv { padding: 0.55rem 1rem; font-size: 0.82rem; }
   }
   @media (max-width: 1100px) and (min-width: 769px) {
     .nav-links { gap: 1.1rem; font-size: 0.85rem; }
-    .btn-nav-cv { padding: 0.55rem 1.1rem; font-size: 0.8rem; }
+    .nav-cta { gap: 0.4rem; }
+    .btn-nav-cv { padding: 0.5rem 0.85rem; font-size: 0.78rem; }
+    .btn-nav-cv i { display: none; }
   }
   .nav-links a {
     position: relative;
@@ -223,7 +226,8 @@
   .nav-links a.is-active { color: var(--navy-dark); }
   .nav-links a.is-active::after { width: 100%; }
   
-  .btn-nav-cv { padding: 0.6rem 1.3rem; font-size: 0.88rem; }
+  .nav-cta { display: flex; align-items: center; gap: 0.6rem; }
+  .btn-nav-cv { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
   
   .hamburger {
     display: none;
@@ -624,7 +628,7 @@
   @media (max-width: 768px) {
     section { padding: 4.5rem 6%; }
   
-    .btn-nav-cv { display: none; }
+    .nav-cta { display: none; }
   
     .nav-links {
       position: fixed;

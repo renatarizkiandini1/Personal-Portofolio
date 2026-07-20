@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Renata Rizki Andini | Web Developer & DevOps Enthusiast</title>
-  <meta name="description" content="Portfolio Renata Rizki Andini — Lulusan SMK RPL dengan pengalaman DevOps Support di Sarastya Technology Integrata. Terbiasa membangun aplikasi web dengan React dan Laravel."/>
+  <title>Renata Rizki Andini | DevOps Support & Web Developer</title>
+  <meta name="description" content="Portofolio Renata Rizki Andini, lulusan SMK Rekayasa Perangkat Lunak dengan pengalaman DevOps Support di Sarastya Technology Integrata. Terbiasa mendukung deployment aplikasi serta membangun proyek web dengan Laravel dan React."/>
   <meta name="theme-color" content="#1c3d5a"/>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
@@ -24,12 +24,17 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
+        <!-- <li><a href="#certificates">Certificates</a></li> -->
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="assets/CV-Renata-Rizki-Andini.pdf" download class="btn btn-primary btn-nav-cv">
-        <i class="fas fa-download"></i> Download CV
-      </a>
+      <div class="nav-cta">
+        <a href="assets/CV-Renata-Rizki-Andini.pdf" download class="btn btn-outline btn-nav-cv">
+          <i class="fas fa-download"></i> CV
+        </a>
+        <a href="assets/Portfolio-Renata-Rizki-Andini.pdf" download class="btn btn-primary btn-nav-cv">
+          <i class="fas fa-download"></i> Portfolio
+        </a>
+      </div>
       <button class="hamburger" aria-label="Buka menu navigasi" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
@@ -43,12 +48,15 @@
       <div class="hero-text">
         <p class="hero-greeting hero-anim">Halo, saya</p>
         <h1 class="hero-anim">Renata Rizki <span>Andini</span></h1>
-        <p class="hero-role hero-anim"></p> <span class="dot"></span></p>
+        <p class="hero-role hero-anim">DevOps Support <span class="dot">•</span> Web Developer</p>
         <p class="hero-desc hero-anim">Lulusan SMK Rekayasa Perangkat Lunak dengan pengalaman Praktik Kerja Lapangan sebagai DevOps Support di <strong>Sarastya Technology Integrata</strong>. Terbiasa membangun aplikasi web dengan React dan Laravel, serta mendukung proses deployment, dokumentasi teknis, dan konfigurasi sistem.</p>
         <div class="hero-btns hero-anim">
           <a href="#projects" class="btn btn-primary">Lihat Proyek Saya</a>
           <a href="assets/CV-Renata-Rizki-Andini.pdf" download class="btn btn-outline">
             <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="assets/Portfolio-Renata-Rizki-Andini.pdf" download class="btn btn-outline">
+            <i class="fas fa-download"></i> Download Portfolio
           </a>
         </div>
       </div>
@@ -67,8 +75,8 @@
       </div>
       <div class="about-content reveal">
         <div class="about-text">
-          <p>Frontend-focused Web Developer dengan pengalaman DevOps selama satu tahun melalui program Praktik Kerja Lapangan di <strong>Sarastya Technology Integrata</strong>. Terbiasa mendukung implementasi aplikasi, deployment frontend dan backend, penyusunan dokumentasi teknis dan user manual, hingga instalasi dan monitoring lingkungan server.</p>
-          <p>Memiliki pengalaman menggunakan <strong>React</strong> dan <strong>Laravel</strong> dalam pengembangan web, serta tools seperti Figma, MySQL, dan GitHub. Saya adalah pribadi yang teliti, adaptif, dan senang belajar hal baru di dunia teknologi.</p>
+          <p>DevOps Support dengan pengalaman satu tahun melalui program Praktik Kerja Lapangan di <strong>Sarastya Technology Integrata</strong>. Selama masa itu, saya terlibat dalam implementasi aplikasi, deployment frontend dan backend, penyusunan dokumentasi teknis dan user manual, hingga instalasi dan monitoring lingkungan server.</p>
+          <p>Di luar pekerjaan, saya mengembangkan proyek web pribadi menggunakan <strong>Laravel</strong> dan <strong>React</strong> untuk terus mengasah kemampuan, didukung MySQL dan GitHub sebagai alat kerja sehari-hari. Saya adalah pribadi yang teliti, adaptif, dan senang mempelajari hal baru di dunia teknologi.</p>
           <div class="about-info reveal-stagger">
             <div><i class="fas fa-graduation-cap"></i> Rekayasa Perangkat Lunak — SMKS PGRI 03 Malang</div>
             <div><i class="fas fa-map-marker-alt"></i> Malang, Jawa Timur, Indonesia</div>
@@ -150,10 +158,9 @@
         <div class="skill-category">
           <h3><i class="fas fa-tools"></i> Tools</h3>
           <div class="skill-tags">
-            <span>Figma</span>
-            <span>VS Code</span>
             <span>MySQL</span>
             <span>GitHub</span>
+            <span>VS Code</span>
           </div>
         </div>
 
@@ -267,32 +274,26 @@
     </section>
 
     <!-- CERTIFICATES -->
+    <!--
+      Section ini dinonaktifkan sementara karena belum ada sertifikat untuk ditampilkan.
+      Cara mengaktifkan kembali: hapus tanda komentar di sini DAN di link navbar "Certificates" pada <nav>.
+      Untuk menambah sertifikat, salin blok <div class="certificate-card"> di bawah lalu isi datanya.
+
     <section class="certificates" id="certificates">
       <div class="section-title reveal">
         <p class="eyebrow">Pengakuan</p>
         <h2>My <span>Certificates</span></h2>
       </div>
-
-      <!--
-        Belum ada sertifikat di CV. Untuk menambah, salin blok <div class="certificate-card"> di bawah,
-        lalu isi nama sertifikat, penerbit, tanggal, dan link (jika ada).
-      -->
       <div class="certificates-grid reveal-stagger" id="certificates-grid">
-        <div class="certificates-empty">
-          <i class="fas fa-award"></i>
-          <p>Sertifikat akan segera ditambahkan di sini.</p>
-        </div>
-
-        <!-- Contoh format untuk sertifikat baru:
         <div class="certificate-card">
           <div class="certificate-icon"><i class="fas fa-certificate"></i></div>
           <h3>Nama Sertifikat</h3>
           <p class="certificate-issuer">Penerbit · Bulan Tahun</p>
           <a href="#" target="_blank" rel="noopener">Lihat Sertifikat <i class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
-        -->
       </div>
     </section>
+    -->
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
@@ -300,7 +301,7 @@
         <p class="eyebrow">Hubungi</p>
         <h2>Get In <span>Touch</span></h2>
       </div>
-      <p class="contact-desc reveal"></p>
+      <p class="contact-desc reveal">Terbuka untuk kesempatan kerja maupun diskusi seputar web development dan DevOps. Silakan hubungi saya melalui salah satu kanal berikut.</p>
       <div class="social-links reveal">
         <a href="https://linkedin.com/in/renata-rizki-andini" target="_blank" rel="noopener" class="social-btn linkedin">
           <i class="fab fa-linkedin"></i> LinkedIn
